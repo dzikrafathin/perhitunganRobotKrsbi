@@ -1,19 +1,8 @@
-# set(CMAKE_CXX_STANDARD 11)
-# set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# set(CMAKE_AUTOMOC ON)
-# set(CMAKE_AUTORCC ON)
-# set(CMAKE_AUTOUIC ON)
-
-# if(CMAKE_VERSION VERSION_LESS "3.7.0")
-#     set(CMAKE_INCLUDE_CURRENT_DIR ON)
-# endif()
-
-#find_package(Qt5 COMPONENTS Widgets REQUIRED)
+add_subdirectory(InputWidget)
 
 add_library(MainWindow MainWindow.cpp)
 
-target_link_libraries(MainWindow Qt5::Widgets)
+target_link_libraries(MainWindow InputWidget Qt5::Widgets)
 target_include_directories(
     MainWindow
     INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}
